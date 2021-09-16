@@ -30,13 +30,7 @@ export default {
       options: {
         hotspot: true,
       },
-    },
-    {
-      name: 'categories',
-      title: 'Categories',
-      type: 'array',
-      of: [{type: 'reference', to: {type: 'category'}}],
-    },
+    }, 
     {
       name: 'publishedAt',
       title: 'Published at',

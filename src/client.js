@@ -1,8 +1,8 @@
 import sanityClient from '@sanity/client'
 
-
-
 export default sanityClient({
-    projectID: "lloq2kp2",
-    dataset: "studio_dataset"
+    projectId: "lloq2kp2",
+    dataset: "studio_dataset",
+    apiVersion: '2021-08-31',
+    useCdn: true
 })
