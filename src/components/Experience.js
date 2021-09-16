@@ -34,23 +34,29 @@ export default function Experience() {
                         </h3>
                         <div className="text-gray-500 text-xs space-x-4">
                             <span>
+                                <h6 className="text-2xl">
+                                    <a 
+                                        href={experience.companyURL} 
+                                        rel="noopener noreferrer" 
+                                        target="_blank" 
+                                        className="text-gray-800 hover:underline hover:text-gray-400"
+                                    >
+                                        {experience.company}
+                                    </a>
+                                </h6>
+                            </span>
+                            <span>
+                                <img src={urlFor(experience.logo).url()} alt="Background Display" className="absolute w-full opacity-10"/>
+                            </span>
+                        </div>
+                        <div className="text-gray-500 text-xs space-x-4">
+                            <span>
                                 <strong className="font-bold">Start Date</strong>: {experience.startDate}
                             </span>
                             <span>
                                 <strong className="font-bold">End Date</strong>: {experience.endDate}
                             </span>
                             <br/><br/>
-                            <h6 className="text-gray-800 text-3xl font-bold mb-2 hover:text-gray-700">
-                            <a 
-                                href={experience.companyURL} 
-                                rel="noopener noreferrer" 
-                                target="_blank" 
-                                className="text-gray-500 font-bold hover:underline hover:text-gray-400"
-                            >
-                                {experience.company}
-                            </a>
-                            <img src={experience.logo} alt="Background Display" className="absolute w-full opacity-10"/>
-                            </h6>
                             <p className="my-6 text-lg text-gray-700 leading-relaxed">
                                 {experience.description }
                             </p>
