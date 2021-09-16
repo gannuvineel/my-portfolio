@@ -9,7 +9,7 @@ export default function Experience() {
             company,
             role,
             startDate,
-            endData,
+            endDate,
             location,
             description,
             logo
@@ -29,6 +29,9 @@ export default function Experience() {
                 <section className="grid grid-cols-2 gap-8">
                   {experienceData && experienceData.map((experience, index) => (
                     <article className="relative rounded-lg shadow-xl bg-white p-16">
+                        <h3 className="text-gray-800 text-3xl font-bold mb-2 hover:text-gray-700">
+                                {experience.role}
+                        </h3>
                         <div className="text-gray-500 text-xs space-x-4">
                             <span>
                                 <strong className="font-bold">Start Date</strong>: {experience.startDate}
@@ -36,7 +39,8 @@ export default function Experience() {
                             <span>
                                 <strong className="font-bold">End Date</strong>: {experience.endDate}
                             </span>
-                            <span>
+                            <br/><br/>
+                            <h6 className="text-gray-800 text-3xl font-bold mb-2 hover:text-gray-700">
                             <a 
                                 href={experience.companyURL} 
                                 rel="noopener noreferrer" 
@@ -45,7 +49,8 @@ export default function Experience() {
                             >
                                 {experience.company}
                             </a>
-                            </span>
+                            <img src={experience.logo} alt="Background Display" className="absolute w-full opacity-10"/>
+                            </h6>
                             <p className="my-6 text-lg text-gray-700 leading-relaxed">
                                 {experience.description }
                             </p>

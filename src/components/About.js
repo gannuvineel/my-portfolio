@@ -30,7 +30,7 @@ export default function About() {
             <img src={pexel} alt="Background Display" className="absolute w-full opacity-10"/>
             <div className="p-10 lg:pt-48 container mx-auto relative">
                 <section className="bg-black rounded-lg shadow-2xl lg:flex p-20">
-                <img src={urlFor(author.authorImage).url() } className="rounder w-40 h-60 lg:w-72 lg:h-72 mr-8" alt={author.name}/>
+                <img src={urlFor(author.authorImage).url() } className="rounder w-40 h-60 lg:w-60 lg:h-72 mr-8" alt={author.name}/>
                 <div className="text-lg flex flex-col justify-center">
                     <h1 className="cursive text-6xl text-gray-300 mb-4">
                         Hey there. I'm {""}
