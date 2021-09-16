@@ -18,9 +18,6 @@ export default function Project() {
             .catch(console.error)
     }, [])
 
-    console.log("project data")
-    console.log(projectData)
-
     return (
         <main className="bg-gray-100 min-h-screen p-12">
             <section className="container mx-auto">

@@ -30,6 +30,12 @@ export default function NavBar() {
                         Projects
                     </NavLink>
                     <NavLink 
+                        to="/experience"
+                        className="inline-flex items-center py-3 px-3 my-6 rounded text-white hover:text-black hover:bg-white"
+                    >
+                        Experience
+                    </NavLink>
+                    <NavLink 
                         to="/about"
                         className="inline-flex items-center py-3 px-3 my-6 rounded text-white hover:text-black hover:bg-white"
                     >
