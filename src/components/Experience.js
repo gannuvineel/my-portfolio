@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from "react"
 import sanityClient from "../client.js"
+import imageUrlBuilder from "@sanity/image-url"
+
+const builder = imageUrlBuilder(sanityClient);
+function urlFor(source) {
+    return builder.image(source);
+}
 
 export default function Experience() {
     const [experienceData, setExperienceData] = useState(null)
@@ -33,23 +39,27 @@ export default function Experience() {
                                 {experience.role}
                         </h3>
                         <div className="text-gray-500 text-xs space-x-4">
-                            <span>
-                                <h6 className="text-2xl">
-                                    <a 
-                                        href={experience.companyURL} 
-                                        rel="noopener noreferrer" 
-                                        target="_blank" 
-                                        className="text-gray-800 hover:underline hover:text-gray-400"
-                                    >
-                                        {experience.company}
-                                    </a>
-                                </h6>
-                            </span>
-                            <span>
-                                <img src={urlFor(experience.logo).url()} alt="Background Display" className="absolute w-full opacity-10"/>
-                            </span>
+                            <div className="float-left">
+                                <span>
+                                    <h6 className="text-2xl">
+                                        <a 
+                                            href={experience.companyURL} 
+                                            rel="noopener noreferrer" 
+                                            target="_blank" 
+                                            className="text-gray-800 hover:underline hover:text-gray-400"
+                                        >
+                                            {experience.company}
+                                        </a>
+                                    </h6>
+                                </span>
+                            </div>
+                            <div className="float-right"> 
+                                <span>
+                                    <img src={urlFor(experience.logo).url()} alt="Background Display" className="relative w-25 h-12"/>
+                                </span>
+                            </div>
                         </div>
-                        <div className="text-gray-500 text-xs space-x-4">
+                        <div className="relative mt-12 text-gray-500 text-xs space-x-4">
                             <span>
                                 <strong className="font-bold">Start Date</strong>: {experience.startDate}
                             </span>

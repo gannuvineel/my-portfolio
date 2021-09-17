@@ -4,6 +4,10 @@ export default {
     type: "document",
     fields: [
         {
+            name: "id",
+            type: "number"
+        },
+        {
             name: "title",
             type: "string"
         },
@@ -33,6 +37,15 @@ export default {
         {
             name: "link",
             type: "url"
+        }
+    ],
+    orderings: [
+        {
+          title: 'ID Desc',
+          name: 'IDDesc',
+          by: [
+            {field: 'id', direction: 'desc'}
+          ]
         }
     ]
 }
