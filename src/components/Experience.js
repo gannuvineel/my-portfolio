@@ -18,8 +18,9 @@ export default function Experience() {
             endDate,
             location,
             description,
-            logo
-        }`
+            logo,
+            sortId
+        } | order(sortId desc)`
         )
             .then((data) => setExperienceData(data))
             .catch(console.error)

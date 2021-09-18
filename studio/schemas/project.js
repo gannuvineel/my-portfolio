@@ -8,6 +8,10 @@ export default {
             type: "number"
         },
         {
+            name: "sortId",
+            type: "number"
+        },
+        {
             name: "title",
             type: "string"
         },
@@ -41,10 +45,10 @@ export default {
     ],
     orderings: [
         {
-          title: 'ID Desc',
-          name: 'IDDesc',
+          title: 'Sort ID Desc',
+          name: 'sortIDDesc',
           by: [
-            {field: 'id', direction: 'desc'}
+            {field: 'sortId', direction: 'desc'}
           ]
         }
     ]

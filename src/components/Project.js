@@ -11,8 +11,9 @@ export default function Project() {
             tools,
             description,
             projectType,
-            link
-        }`
+            link,
+            sortId
+        } | order(sortId desc)`
         )
             .then((data) => setProjectData(data))
             .catch(console.error)
