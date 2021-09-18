@@ -19,7 +19,8 @@ export default function Experience() {
             location,
             description,
             logo,
-            sortId
+            sortId,
+            companyURL
         } | order(sortId desc)`
         )
             .then((data) => setExperienceData(data))
@@ -39,7 +40,7 @@ export default function Experience() {
                         <h3 className="text-gray-800 text-3xl font-bold mb-2 hover:text-gray-700">
                                 {experience.role}
                         </h3>
-                        <div className="text-gray-500 text-xs space-x-4">
+                        <div className="text-gray-800 text-xs space-x-4">
                             <div className="float-left">
                                 <span>
                                     <h6 className="text-2xl">
@@ -47,7 +48,7 @@ export default function Experience() {
                                             href={experience.companyURL} 
                                             rel="noopener noreferrer" 
                                             target="_blank" 
-                                            className="text-gray-800 hover:underline hover:text-gray-400"
+                                            className="text-gray-800 hover:underline hover:text-gray-600"
                                         >
                                             {experience.company}
                                         </a>
