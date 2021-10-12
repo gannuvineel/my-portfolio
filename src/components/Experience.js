@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 import sanityClient from "../client.js"
 import imageUrlBuilder from "@sanity/image-url"
+import pexel from "../pexels.jpg"
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
@@ -29,6 +30,7 @@ export default function Experience() {
 
     return (
         <main className="bg-gray-100 min-h-screen p-12">
+            <img src={pexel} alt="Background Display" className="absolute object-cover w-full h-full opacity-10"/>
             <section className="container mx-auto">
                 <h1 className="text-5xl flex justify-center cursive">My Experience</h1>
                 <h2 className="text-lg text-gray-600 flex justify-center mb-12">
@@ -70,7 +72,14 @@ export default function Experience() {
                             </span>
                             <br/><br/>
                             <p className="my-6 text-lg text-gray-700 leading-relaxed">
-                                {experience.description }
+                            {experience.description.split('\n').map((line, index) => {
+                                    return (
+                                        <React.Fragment key={index}>
+                                        {line}
+                                        <br />
+                                        </React.Fragment>
+                                    )
+                            })}
                             </p>
                         </div>
                     </article>
